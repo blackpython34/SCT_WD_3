@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tic Tac Toe — Fresh</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Tic Tac Toe</h1>
+        <p class="lead">Play locally vs Friend or Computer — choose difficulty and starter.</p>
+      </header>
+
+      <section class="controls">
+        <div class="row">
+          <div class="group">
+            <label>Mode</label>
+            <div class="radios">
+              <label><input type="radio" name="mode" value="pvp" checked> PvP</label>
+              <label><input type="radio" name="mode" value="pvc"> PvC</label>
+            </div>
+          </div>
+
+          <div class="group">
+            <label for="playerSymbol">You play as</label>
+            <select id="playerSymbol">
+              <option value="X">X</option>
+              <option value="O">O</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div class="group actions">
+            <button id="newRound">New Round</button>
+            <button id="resetScores" class="muted">Reset Scores</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="game">
+        <div id="status" class="status" aria-live="polite">Welcome — pick mode and start.</div>
+
+        <div id="board" class="board" role="grid" aria-label="Tic Tac Toe board">
+          <!-- cells injected by JS -->
+        </div>
+
+        <div class="scoreboard">
+          <div class="score"><span class="label">X</span><span id="scoreX">0</span></div>
+          <div class="score"><span class="label">O</span><span id="scoreO">0</span></div>
+          <div class="score"><span class="label">Draws</span><span id="scoreD">0</span></div>
+        </div>
+      </section>
+
+      <footer class="footer">Simple Tic Tac Toe — responsive & accessible</footer>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
+
